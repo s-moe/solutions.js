@@ -15,4 +15,18 @@ const checkPalindrome = (string) => {
 
 };
 
-console.log(checkPalindrome("Eye"))
+
+console.log(checkPalindrome("Racecar"))
+
+//4. Sum Array
+
+const sumArray = (arr) => {
+  let sum = 0;
+  for (let i = 0; i < arr.length; i++) {
+    sum += arr[i];
+
+  }
+  // return sum;
+  console.log(sum)
+}
+sumArray([1, 2, 3])
