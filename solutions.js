@@ -56,3 +56,33 @@ const printPrimes = (num) => {
   console.log(arr)
 }
 printPrimes(97)
+
+//6. ROCK PAPER SCISSORS
+
+const randomMove = () => {
+  let moves = ['rock', 'paper', 'scissors'];
+  let move = moves[Math.floor(Math.random() * moves.length)];
+  return move;
+}
+
+const roackPaperScissors = (computer, user) => {
+  let computerMove = randomMove();
+  let userMove = randomMove();
+
+
+  if (computerMove === userMove) {
+    console.log('draw - you both picked ' + computerMove);
+  }
+
+   else if (computerMove === 'rock' && userMove === 'paper'
+   || computerMove === 'paper' && userMove === 'scissors'
+   || computerMove === 'scissors' && userMove === 'rock')
+   {
+    console.log ('user wins! user picked ' + userMove + ' and computer picked ' + computerMove)
+  }
+
+  else {
+    console.log ('computer wins! user picked ' + userMove + ' and computer picked ' + computerMove)
+  }
+}
+roackPaperScissors()
