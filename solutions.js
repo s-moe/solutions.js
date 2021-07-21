@@ -30,3 +30,29 @@ const sumArray = (arr) => {
   console.log(sum)
 }
 sumArray([1, 2, 3])
+
+//5. Prime Numbers
+//STEP ONE
+const checkPrime = (num) => {
+  if(num < 2) {
+    return false;
+  }
+  for (let i = 2; i < num; i++) {
+    if (num % i === 0) {
+      return false;
+    }
+  }
+  return true;
+}
+console.log(checkPrime(4))
+//STEP TWO
+const printPrimes = (num) => {
+  let arr = [2];
+  for (let i = 3; i <= num; i += 2) {
+    if(checkPrime(i)) {
+      arr.push(i)
+    }
+  }
+  console.log(arr)
+}
+printPrimes(97)
